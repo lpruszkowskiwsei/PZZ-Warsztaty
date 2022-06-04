@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>Pizzeria przy Projektowej</title>
+		<meta charset="UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+		<link rel="stylesheet" href="css/style.css" type="text/css"></link>
+		<link href="css/lightbox.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC"></link>
+		<style>
+		body, html {height: 100%}
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+		.menu {display: none}
+		.bgimg
+		{
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url("images/pizza1.jpg");
+			min-height: 100%;
+		}
+		</style>
+	</head>
+	<body>
+	<script src="js/lightbox.js"></script>
+		<!-- Navbar (nawigacja w nagłowku) -->
+		<div class="top hide-small">
+			<div class="bar xlarge black opacity hover-opacity-off" id="NavBar"> 
+				<a href="#" class="bar-item button">STRONA GŁÓWNA</a>
+				<a href="#menu" class="bar-item button">MENU</a>
+				<a href="#onas" class="bar-item button">O NAS</a>
+				<a href="#galeria" class="bar-item button">GALERIA</a>
+				<a href="#rezerwacja" class="bar-item button">REZERWACJA</a>
+				<a href="#kontakt" class="bar-item button">KONTAKT</a>
+			</div>
+		</div>
+		
+		<!-- Nagłowek zdjęcie -->
+		<header class="bgimg display-container grayscale-min" id="home">
+			<div class="display-bottomleft padding">
+				<span class="tag xlarge">Otwarte codziennie w godzinach 10:00 - 22:00</span>
+			</div>
+			<div class="display-middle center">
+				<span class="text-white hide-small" id="tytul" style="font-size:100px"><br><B>PIZZERIA PRZY PROJEKTOWEJ<B></span>
+				<span class="text-white hide-large hide-medium" style="font-size:60px"><b><br>PIZZA</b></span>
+				<p><a href="#menu" class="button xxlarge black">Pokaż menu</a></p>
+			</div>
+		</header> 
+		
+		<!-- Menu -->
+		<div class="container black padding-64 xxlarge" id="menu">
+			<div class="content">
+  				<h1 class="center jumbo" style="margin-bottom:64px">MENU</h1>
+				<div class="row center border border-dark-grey">
+					<a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+						<div class="col s4 tablink padding-large hover-red red">Pizza</div>
+					</a>
+					<a href="javascript:void(0)" onclick="openMenu(event, 'Salatka');">
+						<div class="col s4 tablink padding-large hover-red">Sałatki</div>
+					</a>
+					<a href="javascript:void(0)" onclick="openMenu(event, 'Napoje');">
+						<div class="col s4 tablink padding-large hover-red">Napoje</div>
+					</a>
+				</div>
+
+				<div id="Pizza" class="container menu padding-32 white" style="display: block;">
+					<h1 id="smaller"><b>Margherita</b> <span class="right tag dark-grey round">21,00 zł</span></h1>
+					<p class="text-grey" id="smaller">oregano, sos pomidorowy, mozzarella</p>
+					<hr>
+			   
+					<h1 id="smaller"><b>Americana</b> <span class="right tag dark-grey round">31,00 zł</span></h1>
+					<p class="text-grey" id="smaller">kukurydza, cebula, bekon, salami, mozzarella</p>
+					<hr>
+				  
+					<h1 id="smaller"><b>Wiejska</b> <span class="right tag dark-grey round">30,00 zł</span></h1>
+					<p class="text-grey" id="smaller">czosnek, ogórek konserwowy, cebula, kabanos, mozzarella</p>
+					<hr>
+
+					<h1 id="smaller"><b>Kebab</b> <span class="right tag dark-grey round">28,00 zł</span></h1>
+					<p class="text-grey" id="smaller">cebula, kebab drobiowy, mozzarella</p>
+					<hr>
+				</div>
+
+				<div id="Salatka" class="container menu padding-32 white" style="display: none;">
+				  <h1 id="smaller"><b>Grecka</b> <span class="tag grey round"></span> <span class="right tag dark-grey round">17,00 zł</span></h1>
+				  <p class="text-grey"  id="smaller">sałata lodowa, ogórek, pomidor, ser feta, oliwki, papryka, sos vinegrette</p>
+				  <hr>
+			   
+				  <h1 id="smaller"><b>Włoska</b> <span class="right tag dark-grey round">18,00 zł</span></h1>
+				  <p class="text-grey" id="smaller">mix sałat, oliwki czarne, suszony pomidor, kapary, grillowana cukinia, chipsy z boczku, grzanki, oliwa ziołowa</p>
+				  <hr>
+					  
+				  <h1 id="smaller"><b>Meksykańska</b> <span class="right tag dark-grey round">18,00 zł</span></h1>
+				  <p class="text-grey" id="smaller">sałata lodowa, papryka jalapeno, fasola czerwona, kurczak kebab, kukurydza, cebula, sos vinegre</p>
+				  <hr>
+
+				  <h1 id="smaller"><b>Grillowa</b> <span class="right tag dark-grey round">18,00 zł</span></h1>
+				  <p class="text-grey" id="smaller">sałata lodowa, kurczak kebab, ogórek, pomidor, cebula, fasola czerwona, kukurydza, sos jogurtowy</p>
+				</div>
+
+				<div id="Napoje" class="container menu padding-32 white" style="display: none;">
+				  <h1 id="smaller"><b>Coca Cola</b> <span class="tag grey round"></span><span class="right tag dark-grey round">4,50 zł</span></h1>				  
+				  <hr>
+			   
+				  <h1 id="smaller"><b>Pepsi</b> <span class="right tag dark-grey round">4,50 zł</span></h1>				  
+				  <hr>
+				  
+				  <h1 id="smaller"><b>Sprite</b> <span class="right tag dark-grey round">3,50 zł</span></h1>
+				  <hr>
+				</div><br>
+			</div>
+		</div>
+		
+		<!-- O nas -->
+		<div class="container padding-64 red grayscale xlarge" id="onas">
+			<div class="content">
+				<h1 class="center jumbo" style="margin-bottom:64px">O nas</h1>
+				<p>
+				Pizzeria przy Projektowej to niesamowite miejsce dla każdego! Wyróżnia nas doskonały smak potraw, niepowtarzalny wystrój lokali i oryginalne, opalane drewnem piece do pizzy. Restauracja powstała w 2022 roku. 
+				</p>
+				<p>
+				Zapraszamy na pizzę przygotowaną według oryginalnej receptury, ze składników najwyższej jakości.Pizzeria przy Projektowej to pasja, smak, tradycja oraz profesjonalizm - dbamy, aby każde nasze danie cechowało się wyjątkowym i charakterystycznym smakiem, które każdemu klientowi będzie przypominać o naszej restauracji. 
+				</p>
+				<center><img src="images/gallery/photos/02.png" style="width:60%" class="margin-top margin-bottom" alt="Restauracja"></center>
+				<p><span class="tag">Godziny otwarcia:</span><br> 
+				
+			<div class="row">
+			  <div class="col s6">
+				<p>Poniedziałek - zamknięte</p>
+				<p>Wtorek 10.00 - 22.00</p>
+				<p>Środa 10:00 - 22:00</p>
+				<p>Czwartek 10:00 - 22:00</p>			
+			  </div>
+			  <div class="col s6">
+				<p>Piatek 10:00 - 12:00</p>
+				<p>Sobota 10:00 - 23:00</p>
+				<p>Niedziela - zamknięte</p>
+			  </div>
+			</div>				
+		  </div>
+		</div>
+		
+		<!-- Galeria -->
+				<div class="container padding-64 brown grayscale xlarge" id="galeria">
+			<div class="content">
+				<h1 class="center jumbo" style="margin-bottom:64px">Galeria</h1>
+		<p>
+		<a href="images\gallery\photos\01.png" data-lightbox="gallery"><img src="images\gallery\thumbnails\01.jpg"></a>	
+		<a href="images\gallery\photos\02.png" data-lightbox="gallery"><img src="images\gallery\thumbnails\02.jpg"></a>	
+		<a href="images\gallery\photos\03.png" data-lightbox="gallery"><img src="images\gallery\thumbnails\03.jpg"></a></p>
+		<p>
+		<a href="images\gallery\photos\04.png" data-lightbox="gallery"><img src="images\gallery\thumbnails\04.jpg"></a>	
+		<a href="images\gallery\photos\05.png" data-lightbox="gallery"><img src="images\gallery\thumbnails\05.jpg"></a>	
+		<a href="images\gallery\photos\06.png" data-lightbox="gallery"><img src="images\gallery\thumbnails\06.jpg"></a></p>
+		<p>
+		<a href="images\gallery\photos\07.jpg" data-lightbox="gallery"><img src="images\gallery\thumbnails\07.jpg"></a>	
+		<a href="images\gallery\photos\08.jpg" data-lightbox="gallery"><img src="images\gallery\thumbnails\08.jpg"></a>	
+		<a href="images\gallery\photos\09.jpg" data-lightbox="gallery"><img src="images\gallery\thumbnails\09.jpg"></a></p>
+		<p>
+		<a href="images\gallery\photos\10.jpg" data-lightbox="gallery"><img src="images\gallery\thumbnails\10.jpg"></a>	
+		<a href="images\gallery\photos\11.jpg" data-lightbox="gallery"><img src="images\gallery\thumbnails\11.jpg"></a>	
+		<a href="images\gallery\photos\12.jpg" data-lightbox="gallery"><img src="images\gallery\thumbnails\12.jpg"></a></p>										
+		  </div>
+		</div>
+		
+						<!-- Rezerwacja -->	
+		<div class="container padding-64 grey grayscale-min xlarge" id="rezerwacja">
+		  <div class="content">
+			<h1 class="center jumbo" style="margin-bottom:64px">REZERWACJA</h1>
+			<form action="/action_page.php" target="_blank">
+			  <p><input class="input padding-16 border" type="text" placeholder="Imie" required="" name="Name"></p>
+			  <p><input class="input padding-16 border" type="number" placeholder="Ile osbób" required="" name="People"></p>
+			  <p><input class="input padding-16 border" type="datetime-local" placeholder="Data i czas" required="" name="date" value="2022-04-23T20:00"></p>
+			  <p><input class="input padding-16 border" type="text" placeholder="Dodatkowe wiadomości \ specjalne wymagania" required="" name="Message"></p>
+			  <p><button class="button light-grey block" type="submit">Rezerwuj</button></p>
+			</form>
+		  </div>
+		</div>
+
+
+		
+
+		
+				<!-- Kontakt -->
+		<div class="container padding-64 blue-grey grayscale-min xlarge" id="kontakt">
+		  <div class="content">
+			<h1 class="center jumbo" style="margin-bottom:64px">Kontakt</h1>
+			<p><span class="tag">Gdzie jesteśmy?</span><br> 
+			<p>ul. Projektowa 4<br>
+			20-209 Lublin<br>
+			Tel: (81) 888-888-888<br>
+			E-mail: pizzeria_przy_projektowej4@wp.pl<br>
+			</p>
+			</p>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.552487474166!2d22.60861071576031!3d51.24573617959298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472256d8d6aff425%3A0x28ac4cd0e7d21576!2sProjektowa%204%2C%2020-209%20Lublin!5e0!3m2!1spl!2spl!4v1641468893084!5m2!1spl!2spl" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" id="mapa"></iframe>
+		</div>
+		</div>
+		
+		
+
+		<!-- Footer -->
+		<footer class="center black padding-32 large">
+		  <p>Przygotowali: Monika Próchniak, Łukasz Pruszkowski, Tola Rączka, Krzysztof Rutkowski</p>
+		</footer>
+		
+		<!-- Skrypt menu -->
+		<script type="text/javascript" src="js/skrypt.js"></script>	
+				
+	</body>
+</html>	
+		
